@@ -1,0 +1,114 @@
+.contacts {
+  padding-top: 2.81rem;
+  padding-bottom: 2.5rem;
+  background-color: $white;
+}
+
+.contacts__text {
+  @include set-font(0.88rem, 400, 1.25rem, $color-text);
+
+  &--map {
+    margin: 0;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+.contacts__link {
+  @include set-font(0.88rem, 400, 1.25rem, $color-text);
+  text-decoration: none;
+  transition: 0.2s ease;
+
+  &:hover {
+    color: $accent--main;
+    text-decoration: none;
+  }
+
+  &--email {
+    font-weight: 700;
+    color: $accent--main;
+
+    &:hover {
+      color: $color-text;
+    }
+  }
+}
+
+.contacts__feedback {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__form-group {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+}
+
+.contacts__label {
+  @include set-font(0.88rem, 400, 2.25rem, $black);
+  margin: 0;
+  margin-top: 0.5rem;
+
+  &:hover {
+    color: $accent--main;
+    cursor: pointer;
+  }
+
+  &:hover + .contacts__input,
+  &:hover + .contacts__message {
+    border-color: $accent--main;
+    outline: none;
+  }
+}
+
+.contacts__input,
+.contacts__message {
+  height: 2.36rem; //for IE
+  padding: 0.13rem 0.5rem;
+  @include set-font(0.88rem, 400, 2.25rem, $color-text);
+  border: 1px solid $input-border;
+
+  &:hover,
+  &:focus {
+    border-color: $accent--main;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.contacts__message {
+  min-height: 80px;
+}
+
+.contacts__map {
+  max-width: 340px;
+  padding: 20px;
+
+  border: 1px solid $bg-slider;
+  background-color: $bg-download;
+}
+
+.contacts__map-wrapper {
+  width: auto;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 3px;
+  background-color: $white;
+}
+
+.contacts__map-image {
+  width: 100%;
+  height: auto;
+}
+
+.contacts__address {
+  margin-top: 35px;
+}
+
+@media (min-width: $width-md) {
+  .contacts__message {
+    min-height: 160px;
+  }
+}
+

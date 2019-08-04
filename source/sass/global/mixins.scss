@@ -1,0 +1,19 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin set-font($size, $weight, $line-height,  $font-color) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  color: $font-color;
+}
+
+@mixin pseudo-absolute($width, $height) {
+  content: "";
+  position: absolute;
+  width: $width;
+  height: $height;
+}

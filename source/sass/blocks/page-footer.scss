@@ -1,0 +1,41 @@
+.page-footer {
+  padding-top: 1.88rem;
+  padding-bottom: 3.13rem;
+}
+
+.page-footer__logo {
+  margin-bottom: 1.25em;
+}
+
+.page-footer__text {
+  @include set-font(0.88rem, 400, 1.25rem, $color-text);
+}
+
+.page-footer__link {
+  @include set-font(0.88rem, 400, 1.25rem, $color-text);
+  text-decoration: none;
+  transition: 0.2s ease;
+
+  &:hover {
+    color: $accent--main;
+    text-decoration: none;
+  }
+}
+
+.page-footer__developer {
+  @include set-font(0.88rem, 400, 1.25rem, $accent--main);
+  text-decoration: none;
+  transition: 0.2s ease;
+
+  &:hover {
+    color: $accent--main;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: $width-md) {
+  .page-footer__logo {
+    margin-bottom: 0;
+  }
+}

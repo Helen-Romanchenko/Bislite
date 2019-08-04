@@ -1,0 +1,61 @@
+.button {
+
+  display: inline-block;
+  margin: 0;
+  padding: 1.25rem 2rem;
+  font-family: $font-regular;
+  @include set-font(1.13rem, 700, 1.13rem, $color-btn);
+  text-transform: uppercase;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), inset 0 2px 1px rgba(255, 255, 255, 0.1);
+  border: 1px solid $accent--main;
+  background-color: $accent--main;
+  background-image: linear-gradient(to top, $accent--main 0%, #60cede 15%, #72dae6 50%, $bg-slider 100%);
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+
+
+  &:hover,
+  &:active {
+    color: $white;
+
+  }
+
+  &--download {
+    position: relative;
+    align-self: center;
+    padding-left: 71px;
+    &::before {
+      @include pseudo-absolute(40px, 40px);
+      top: 8px;
+      left: 20px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url("../img/icon-download.svg");
+      background-size: 28px 25px;
+    }
+  }
+
+  &--submit {
+    position: relative;
+    max-width: 11.25rem;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-left: 60px;
+    &::before {
+      @include pseudo-absolute(40px, 40px);
+      top: 8px;
+      left: 10px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url("../img/icon-submit.svg");
+      background-size: 24px 24px;
+    }
+
+    @media (min-width: $width-lg) {
+      margin-bottom: 0;
+    }
+  }
+}

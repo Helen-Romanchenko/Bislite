@@ -1,0 +1,84 @@
+.advantages {
+  padding-top: 1.88rem;
+  padding-bottom: 2.5rem;
+}
+
+.advantages__item {
+  margin-top: 1.25rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.advantages__desc {
+  margin: 0;
+  @include set-font(0.81rem, 400, 1.25rem, $color-text);
+}
+
+.advantages__link {
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-top: 10px;
+  padding-left: 12px;
+  @include set-font(0.81rem, 400, 1.25rem, $accent--main);
+  transition: 0.3s ease;
+
+  &::before {
+    left: 0;
+    top: 6px;
+    @include pseudo-absolute(5px, 5px);
+    border: 2px solid $black;
+    border-top: none;
+    border-left: none;
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    font-weight: 700;
+    color: $accent--main;
+    text-decoration: none;
+
+    &::before {
+      border-color: $accent--main;
+    }
+  }
+
+  &:active {
+    font-weight: 700;
+    color: $accent--main;
+    text-decoration: none;
+
+    &::before {
+      border-color: $accent--main;
+    }
+  }
+}
+
+@media (min-width: $width-sm) {
+  .advantages__item:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $width-md) {
+  .advantages {
+    padding-top: 3.13rem;
+    padding-bottom: 3.13rem;
+  }
+}
+
+@media (min-width: $width-lg) {
+  .advantages {
+    padding-top: 3.75rem;
+  }
+
+  .advantages__item {
+    margin-top: 0;
+
+    &:nth-child(n+5) {
+      margin-top: 1.25rem;
+    }
+  }
+}

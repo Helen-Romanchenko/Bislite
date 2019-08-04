@@ -1,0 +1,26 @@
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  @include list-reset;
+}
+
+.tabs__link {
+  display: block;
+  padding: 0.5rem 1.06rem;
+  @include set-font(0.88rem, 400, 0.88rem, $black);
+  text-decoration: none;
+  cursor: pointer;
+
+  &.active {
+    background-color: $accent--main;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  &:hover {
+    color: $accent--main;
+    text-decoration: none;
+  }
+}

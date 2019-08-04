@@ -1,0 +1,19 @@
+.page-header {
+  padding-top: 0.63rem;
+  padding-bottom: 0.94rem;
+  background-color: $bg-section;
+}
+
+@media (min-width: $width-md) {
+  .page-header {
+    padding-top: 1.25rem;
+    padding-bottom: 1.56rem;
+  }
+}
+
+@media (min-width: $width-lg) {
+  .page-header {
+    padding-top: 2.19rem;
+    padding-bottom: 2.88rem;
+  }
+}

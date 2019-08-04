@@ -1,0 +1,13 @@
+.nav-link {
+  display: inline-block;
+  width: auto;
+  @include set-font(0.88rem, 400, 1.25rem, $color-text);
+  padding: 0.25rem 1.25rem 0.25rem 0;
+  text-decoration: none;
+  transition: 0.2s ease;
+
+  &:hover {
+    color: $accent--main;
+    text-decoration: none;
+  }
+}

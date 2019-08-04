@@ -1,0 +1,59 @@
+.portfolio {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: $white;
+}
+
+.portfolio__pagination {
+  display: flex;
+  flex-wrap: wrap;
+  @include list-reset;
+}
+
+.portfolio__page-item--nav {
+  margin-right: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.portfolio__page-link {
+  display: block;
+  width: 1.63rem;
+  height: 1.63rem;
+  @include set-font(0.88rem, 400, 1.63rem, $black);
+  text-align: center;
+
+  &.active {
+    background-color: $accent--main;
+    &:hover {
+      color: $black;
+      cursor: default;
+    }
+  }
+
+  &:hover {
+    color: $accent--main;
+    text-decoration: none;
+  }
+
+  &--nav {
+    font-size: 1.13rem;
+    font-weight: 700;
+    color: $accent--main;
+    background-color: $bg-section;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  &--disabled {
+    color: $white;
+    &:hover {
+      color: $white;
+      cursor: default;
+    }
+  }
+}

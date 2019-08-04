@@ -1,0 +1,31 @@
+.modal-map__text {
+  @include set-font(0.88rem, 400, 1.25rem, $color-text);
+}
+
+.modal-map__wrapper {
+  width: 260px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.modal-map__link {
+  width: 260px;
+  height: 200px;
+  border: none;
+}
+
+@media (min-width: $width-sm){
+  .modal-map__wrapper,
+  .modal-map__link {
+    width: 450px;
+    height: 350px;
+  }
+}
+
+@media (min-width: $width-lg){
+  .modal-map__wrapper,
+  .modal-map__link {
+    width: 600px;
+    height: 450px;
+  }
+}
