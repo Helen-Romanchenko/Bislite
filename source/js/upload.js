@@ -3,7 +3,7 @@ $(function(){
     var btn = $(this);
     var loader = btn.find("span");
     $.ajax({
-      url: "/assets/uploading-data.html",
+      url: "../assets/uploading-data.html",
       type: "GET",
       beforeSend: function(){
         btn.attr("disabled", true);
@@ -17,12 +17,6 @@ $(function(){
           btn.attr("disabled", false);
           $(".works__upload").before(responce);
         }, 1000);
-      },
-      error: function(){
-        alert("Error!");
-        loader.removeClass("works__spinner-show");
-        loader.addClass("d-none");
-        btn.attr("disabled", false);
       }
     });
   });

@@ -17,12 +17,6 @@ $(function(){
           btn.attr("disabled", false);
           $(".works__upload").before(responce);
         }, 1000);
-      },
-      error: function(){
-        alert("Error!");
-        loader.removeClass("works__spinner-show");
-        loader.addClass("d-none");
-        btn.attr("disabled", false);
       }
     });
   });
