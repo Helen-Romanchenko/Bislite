@@ -3,7 +3,7 @@ $(function(){
     var btn = $(this);
     var loader = btn.find("span");
     $.ajax({
-      url: "/assets/uploading-data.html",
+      url: "../assets/uploading-data.html",
       type: "GET",
       beforeSend: function(){
         btn.attr("disabled", true);
